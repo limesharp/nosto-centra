@@ -15,12 +15,12 @@ spec:
         app: console-project
     spec:
       containers:
-      - name: Log in to the Container registry
-        uses: docker/login-action@v2
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+        - name: Log in to the Container registry
+          uses: docker/login-action@v2
+          with:
+            registry: ${{ env.REGISTRY }}
+            username: ${{ github.actor }}
+            password: ${{ secrets.GITHUB_TOKEN }}
         - name: console-project
           image: ghcr.io/${IMAGE_NAME}:main
           imagePullPolicy: Always
