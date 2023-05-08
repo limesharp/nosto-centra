@@ -21,7 +21,6 @@ spec:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          
         - name: console-project
           image: ghcr.io/${IMAGE_NAME}:main
           imagePullPolicy: Always
